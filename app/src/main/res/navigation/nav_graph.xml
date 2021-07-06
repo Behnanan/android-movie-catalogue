@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/itemDetails"
+        android:name="com.example.navigationapplication.ItemDetails"
+        android:label="fragment_item_details"
+        tools:layout="@layout/fragment_item_details" />
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.navigationapplication.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeScreenFragment2"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.example.navigationapplication.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_itemDetails"
+            app:destination="@id/itemDetails" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_aboutScreenFragment"
+            app:destination="@id/aboutScreenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutScreenFragment"
+        android:name="com.example.navigationapplication.AboutScreenFragment"
+        android:label="fragment_about_screen"
+        tools:layout="@layout/fragment_about_screen" />
+
+</navigation>
