@@ -1,7 +1,7 @@
-package com.example.navigationapplication.data
+package com.example.moviecatalogue.data
 
-import com.example.navigationapplication.R
-import com.example.navigationapplication.model.Movie
+import com.example.moviecatalogue.R
+import com.example.moviecatalogue.model.Movie
 
 class Datasource {
 

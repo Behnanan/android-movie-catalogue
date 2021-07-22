@@ -1,17 +1,15 @@
-package com.example.navigationapplication.adapter
+package com.example.moviecatalogue.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.navigationapplication.CellClickListener
-import com.example.navigationapplication.HomeScreenFragment
-import com.example.navigationapplication.R
-import com.example.navigationapplication.model.Movie
+import com.example.moviecatalogue.interfaces.CellClickListener
+import com.example.moviecatalogue.fragments.HomeScreenFragment
+import com.example.moviecatalogue.R
+import com.example.moviecatalogue.model.Movie
 
 /**
  * Adapter for the [RecyclerView] in [HomeScreenFragment]. Displays [Movie] data object.

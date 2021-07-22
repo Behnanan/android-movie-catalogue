@@ -6,14 +6,18 @@
     app:startDestination="@id/splashFragment">
 
     <fragment
-        android:id="@+id/itemDetails"
-        android:name="com.example.navigationapplication.ItemDetails"
+        android:id="@+id/itemDetailsFragment"
+        android:name="com.example.moviecatalogue.fragments.ItemDetailsFragment"
         android:label="fragment_item_details"
-        tools:layout="@layout/fragment_item_details" />
+        tools:layout="@layout/fragment_item_details" >
+        <action
+            android:id="@+id/action_itemDetailsFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.navigationapplication.SplashFragment"
+        android:name="com.example.moviecatalogue.fragments.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -23,12 +27,12 @@
 
     <fragment
         android:id="@+id/homeScreenFragment"
-        android:name="com.example.navigationapplication.HomeScreenFragment"
+        android:name="com.example.moviecatalogue.fragments.HomeScreenFragment"
         android:label="fragment_home_screen"
         tools:layout="@layout/fragment_home_screen" >
         <action
             android:id="@+id/action_homeScreenFragment_to_itemDetails"
-            app:destination="@id/itemDetails" />
+            app:destination="@id/itemDetailsFragment" />
         <action
             android:id="@+id/action_homeScreenFragment_to_aboutScreenFragment"
             app:destination="@id/aboutScreenFragment" />
@@ -36,8 +40,12 @@
 
     <fragment
         android:id="@+id/aboutScreenFragment"
-        android:name="com.example.navigationapplication.AboutScreenFragment"
+        android:name="com.example.moviecatalogue.fragments.AboutScreenFragment"
         android:label="fragment_about_screen"
-        tools:layout="@layout/fragment_about_screen" />
+        tools:layout="@layout/fragment_about_screen" >
+        <action
+            android:id="@+id/action_aboutScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
 
 </navigation>

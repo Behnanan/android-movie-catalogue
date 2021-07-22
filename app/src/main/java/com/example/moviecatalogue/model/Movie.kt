@@ -1,4 +1,4 @@
-package com.example.navigationapplication.model
+package com.example.moviecatalogue.model
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

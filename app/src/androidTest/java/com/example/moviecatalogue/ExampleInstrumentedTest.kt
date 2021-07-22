@@ -1,4 +1,4 @@
-package com.example.navigationapplication
+package com.example.moviecatalogue
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

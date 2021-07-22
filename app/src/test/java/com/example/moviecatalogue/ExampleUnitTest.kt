@@ -1,4 +1,4 @@
-package com.example.navigationapplication
+package com.example.moviecatalogue
 
 import org.junit.Test
 
