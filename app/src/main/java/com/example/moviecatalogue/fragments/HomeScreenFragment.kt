@@ -1,9 +1,7 @@
 package com.example.moviecatalogue.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
@@ -15,22 +13,20 @@ import com.example.moviecatalogue.model.Movie
 
 class HomeScreenFragment : Fragment(), CellClickListener {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        inflater.inflate(R.menu.alt_menu, menu)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_home_screen, container, false)
-//        view.findViewById<View>(R.id.listAddNewNote).setOnClickListener {
-//            findNavController().navigate(R.id.action_listFragment_to_addFragment)
-//        }
-//
-//        view.findViewById<View>(R.id.listLayout).setOnClickListener {
-//            findNavController().navigate(R.id.action_listFragment_to_updateFragment)
-//        }
-        // TO DO
-//        setNavigationOnClickListener {
-//            Navigation.findNavController(view).navigate(R.id.aboutScreenFragment)
-//        }
 
         // Initialize data.
         val movieDataset = Datasource().loadMovies()

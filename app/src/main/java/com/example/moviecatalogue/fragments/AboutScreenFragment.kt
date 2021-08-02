@@ -14,11 +14,6 @@ class AboutScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_about_screen, container, false)
-
-        // To DO
-//        setNavigationOnClickListener {
-//            Navigation.findNavController(view).navigate(R.id.homeScreenFragment)
-//        }
         return view
     }
 

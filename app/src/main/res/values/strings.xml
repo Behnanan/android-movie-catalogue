@@ -8,4 +8,6 @@
     <string name="movie5">Lawrence of Arabia</string>
     <string name="movie6">The Wizard of Oz</string>
     <string name="movie7">Ran</string>
+    <string name="about" />
+    <string name="item_details" />
 </resources>

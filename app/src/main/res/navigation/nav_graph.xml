@@ -6,23 +6,15 @@
     app:startDestination="@id/splashFragment">
 
     <fragment
-        android:id="@+id/itemDetailsFragment"
-        android:name="com.example.moviecatalogue.fragments.ItemDetailsFragment"
-        android:label="fragment_item_details"
-        tools:layout="@layout/fragment_item_details" >
-        <action
-            android:id="@+id/action_itemDetailsFragment_to_homeScreenFragment"
-            app:destination="@id/homeScreenFragment" />
-    </fragment>
-
-    <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.moviecatalogue.fragments.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_homeScreenFragment2"
-            app:destination="@id/homeScreenFragment" />
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/homeScreenFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
@@ -39,6 +31,16 @@
     </fragment>
 
     <fragment
+        android:id="@+id/itemDetailsFragment"
+        android:name="com.example.moviecatalogue.fragments.ItemDetailsFragment"
+        android:label="fragment_item_details"
+        tools:layout="@layout/fragment_item_details" >
+        <action
+            android:id="@+id/action_itemDetailsFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+
+    <fragment
         android:id="@+id/aboutScreenFragment"
         android:name="com.example.moviecatalogue.fragments.AboutScreenFragment"
         android:label="fragment_about_screen"
@@ -47,5 +49,4 @@
             android:id="@+id/action_aboutScreenFragment_to_homeScreenFragment"
             app:destination="@id/homeScreenFragment" />
     </fragment>
-
 </navigation>
