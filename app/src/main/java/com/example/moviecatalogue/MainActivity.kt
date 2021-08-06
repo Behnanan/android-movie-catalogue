@@ -1,13 +1,11 @@
 package com.example.moviecatalogue
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,10 +24,12 @@ class MainActivity : AppCompatActivity() {
 
         // pablo, do we need this?
         // app bar
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
+//        val appBarConfiguration = AppBarConfiguration(navController.graph)
 
         // no title in app bar
-        supportActionBar!!.setDisplayShowTitleEnabled(false)
+//        supportActionBar!!.setDisplayShowTitleEnabled(false)
+
+        setupActionBarWithNavController(navController)
     }
 
     override fun onSupportNavigateUp(): Boolean {

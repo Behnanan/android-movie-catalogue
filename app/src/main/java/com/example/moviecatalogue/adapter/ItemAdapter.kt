@@ -18,7 +18,7 @@ import com.example.moviecatalogue.model.Movie
 class ItemAdapter(
     private val context: HomeScreenFragment,
     private val dataset: List<Movie>,
-    private val cellClickListener: CellClickListener
+//    private val cellClickListener: CellClickListener
 
 ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
@@ -49,7 +49,7 @@ class ItemAdapter(
         holder.textView.text = context.resources.getString(item.stringResourceId)
         holder.imageView.setImageResource(item.imageResourceId)
         holder.itemView.setOnClickListener {
-            cellClickListener.onCellClickListener(item)
+//            cellClickListener.onCellClickListener(item)
         }
     }
 

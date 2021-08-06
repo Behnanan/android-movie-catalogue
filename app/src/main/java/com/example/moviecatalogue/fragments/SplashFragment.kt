@@ -21,14 +21,18 @@ class SplashFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_splash, container, false)
 
         // hides action bar
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+//        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
-        view.setOnClickListener(View.OnClickListener {
-            Navigation.findNavController(view).navigate(R.id.homeScreenFragment)
-        })
+//        view.setOnClickListener(View.OnClickListener {
+//            Navigation.findNavController(view).navigate(R.id.homeScreenFragment)
+//        })
         return view
     }
 
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+    }
     override fun onStop() {
         super.onStop()
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
