@@ -1,4 +1,4 @@
-package com.example.moviecatalogue.fragments
+package com.example.moviecatalogue.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -5,9 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.moviecatalogue.interfaces.CellClickListener
-import com.example.moviecatalogue.fragments.HomeScreenFragment
+import com.example.moviecatalogue.home.HomeScreenFragment
 import com.example.moviecatalogue.R
 import com.example.moviecatalogue.model.Movie
 
@@ -48,8 +48,10 @@ class ItemAdapter(
         val item = dataset[position]
         holder.textView.text = context.resources.getString(item.stringResourceId)
         holder.imageView.setImageResource(item.imageResourceId)
-        holder.itemView.setOnClickListener {
-//            cellClickListener.onCellClickListener(item)
+
+        // check with Pablo as to whether this is the correct implementation
+        holder.itemView.setOnClickListener{ view ->
+            view.findNavController().navigate(R.id.action_homeScreenFragment_to_itemDetails)
         }
     }
 
