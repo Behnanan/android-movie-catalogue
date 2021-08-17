@@ -8,7 +8,9 @@
     <string name="movie5">Lawrence of Arabia</string>
     <string name="movie6">The Wizard of Oz</string>
     <string name="movie7">Ran</string>
-    <string name="about_description">Test About Screen</string>
+    <string name="about_description">About Screen</string>
     <string name="about">About</string>
+    <string name="item_details">Item Details</string>
+    <string name="item_details_screen">Item Details Screen</string>
 
 </resources>
